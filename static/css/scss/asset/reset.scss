@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@import 'color';
+@import 'bootstrap';
+
+.feather {
+   width: auto;
+   height: auto;
+
+   &::before {
+      font-size: 1.1rem;
+   }
+}
+
+.btn-primary {
+   background-color: $c-p;
+   border-color: $c-p;
+}
+
+.btn-primary:not(:disabled):not(.disabled):hover,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+   background-color: #636ff3;
+   border-color: #636ff3;
+}

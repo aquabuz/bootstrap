@@ -387,6 +387,12 @@ $contentsPadding: 1.2rem;
   }
 }
 
+.nav-tabs {
+  .nav-link {
+    padding: 0.75rem 1.8rem;
+  }
+}
+
 //  sticky 지원 여부
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
@@ -397,7 +403,7 @@ $contentsPadding: 1.2rem;
 
 // Content
 [role="main"] {
-  padding: 70px 10px 20px ; 
+  padding: 80px 20px 20px; 
   min-height: 100vh;
   /* Space for fixed navbar */
 }
@@ -520,17 +526,27 @@ $contentsPadding: 1.2rem;
 
 // main
 .m-title {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.75rem;
+
+  .btn-toolbar {
+    margin-bottom: 0.75rem;
+
+    .breadcrumb {
+      padding: 0;
+      margin-bottom: 0;
+      background-color: transparent;
+    }
+  }
 
   h2 {
-    font-size: 1.12rem;
+    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
     color: $f-g4;
   }
+  
 }
 
 .i-value {

@@ -3,6 +3,14 @@
 @import 'color';
 @import 'bootstrap';
 
+a {
+   color: #222;
+
+   &:hover {
+      color: black;
+   }
+}
+
 .feather {
    width: auto;
    height: auto;
@@ -10,6 +18,15 @@
    &::before {
       font-size: 1.1rem;
    }
+}
+
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+   padding-right: 0;
+   padding-left: 0;
 }
 
 .btn-primary {
@@ -23,4 +40,24 @@
 .show>.btn-primary.dropdown-toggle {
    background-color: #636ff3;
    border-color: #636ff3;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item {
+   color: #888;
+
+   &.active,
+   &.active a {
+      color: #555;
+   }
+}
+
+.dropdown-toggle,
+.dropdown-item {
+   font-size: 0.9rem;
+}
+
+.dropdown-item {
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
 }

@@ -14,13 +14,27 @@ body { font-family: -apple-system,BlinkMacSystemFont, "Verdana", "Segoe UI",Robo
 
 .btn-primary.blue:hover { background-color: #5d67e0; border-color: #5d67e0; }
 
+a { color: #222; }
+
+a:hover { color: black; }
+
 .feather { width: auto; height: auto; }
 
 .feather::before { font-size: 1.1rem; }
 
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl { padding-right: 0; padding-left: 0; }
+
 .btn-primary { background-color: #727cf5; border-color: #727cf5; }
 
 .btn-primary:not(:disabled):not(.disabled):hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle { background-color: #636ff3; border-color: #636ff3; }
+
+.breadcrumb-item a, .breadcrumb-item { color: #888; }
+
+.breadcrumb-item a.active, .breadcrumb-item a.active a, .breadcrumb-item.active, .breadcrumb-item.active a { color: #555; }
+
+.dropdown-toggle, .dropdown-item { font-size: 0.9rem; }
+
+.dropdown-item { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 .f-g { display: flex; justify-content: center; align-items: center; }
 
@@ -136,9 +150,11 @@ body { font-family: -apple-system,BlinkMacSystemFont, "Verdana", "Segoe UI",Robo
 
 .a-wrap.s-size .nav-toggle::before, .a-wrap.s-size .nav-toggle .icon-dot { left: 50%; }
 
+.nav-tabs .nav-link { padding: 0.75rem 1.8rem; }
+
 @supports (position: sticky) { .sidebar-sticky { position: sticky; } }
 
-[role="main"] { padding: 70px 10px 20px; min-height: 100vh; /* Space for fixed navbar */ }
+[role="main"] { padding: 80px 20px 20px; min-height: 100vh; /* Space for fixed navbar */ }
 
 @media (min-width: 768px) { [role="main"] { /* Space for fixed navbar */ } }
 
@@ -178,9 +194,13 @@ body { font-family: -apple-system,BlinkMacSystemFont, "Verdana", "Segoe UI",Robo
 
 .form-control-dark:focus { border-color: transparent; box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); }
 
-.m-title { padding-top: 20px; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.m-title { padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 0.75rem; }
 
-.m-title h2 { font-size: 1.12rem; font-weight: bold; color: #6d767e; }
+.m-title .btn-toolbar { margin-bottom: 0.75rem; }
+
+.m-title .btn-toolbar .breadcrumb { padding: 0; margin-bottom: 0; background-color: transparent; }
+
+.m-title h2 { font-size: 1.5rem; font-size: 24px; font-weight: bold; color: #6d767e; }
 
 .i-value { position: relative; }
 

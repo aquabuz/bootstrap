@@ -14,6 +14,8 @@ body { font-family: -apple-system,BlinkMacSystemFont, "Verdana", "Segoe UI",Robo
 
 .btn-primary.blue:hover { background-color: #5d67e0; border-color: #5d67e0; }
 
+body { color: #555; }
+
 a { color: #222; }
 
 a:hover { color: black; }
@@ -26,13 +28,33 @@ a:hover { color: black; }
 
 .btn-primary { background-color: #727cf5; border-color: #727cf5; }
 
-.btn-primary:not(:disabled):not(.disabled):hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle { background-color: #636ff3; border-color: #636ff3; }
+.btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled):hover, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle { background-color: #636ff3; border-color: #636ff3; }
 
-.breadcrumb-item a, .breadcrumb-item { color: #888; }
+.btn-secondary { background-color: #f1f3fa; border-color: #f1f3fa; color: #727cf5; }
 
-.breadcrumb-item a.active, .breadcrumb-item a.active a, .breadcrumb-item.active, .breadcrumb-item.active a { color: #555; }
+.btn-secondary:not(:disabled):not(.disabled):focus, .btn-secondary:not(:disabled):not(.disabled):hover, .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle { background-color: #f1f3fa; border-color: #f1f3fa; color: #727cf5; }
+
+.btn-secondary.focus, .btn-secondary:focus { box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.form-control { padding: 0 1rem; width: 100%; font-size: 0.75rem; border-width: 0; border-radius: 3px; background-color: #f1f3fa; }
+
+.table { color: #6d767e; }
+
+.tab-content { width: 100%; }
+
+.breadcrumb-item a, .breadcrumb-item { color: #a0b8d7; }
+
+.breadcrumb-item a + .breadcrumb-item::before, .breadcrumb-item + .breadcrumb-item::before { color: #a0b8d7; }
+
+.breadcrumb-item a.active, .breadcrumb-item a.active a, .breadcrumb-item.active, .breadcrumb-item.active a { color: #7ea2fb; }
 
 .dropdown-toggle, .dropdown-item { font-size: 0.9rem; }
 
 .dropdown-item { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { color: white; border: 0; background-color: #727cf5; }
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover, .nav-tabs .nav-link { border: 0; }
+
+.nav-tabs .nav-link { padding: 0.75rem 1.8rem; font-size: 0.8rem; }
 /*# sourceMappingURL=reset.css.map */

@@ -387,12 +387,6 @@ $contentsPadding: 1.2rem;
   }
 }
 
-.nav-tabs {
-  .nav-link {
-    padding: 0.75rem 1.8rem;
-  }
-}
-
 //  sticky 지원 여부
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
@@ -430,13 +424,8 @@ $contentsPadding: 1.2rem;
   }
 
   .form-control {
-    padding: 0 1rem;
     flex: inherit;
     width: 180px;
-    font-size: 0.75rem;
-    border-width: 0;
-    border-radius: 3px;
-    background-color: #f1f3fa;
   }
 
   .search-btn {
@@ -526,8 +515,7 @@ $contentsPadding: 1.2rem;
 
 // main
 .m-title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   margin-bottom: 0.75rem;
 
   .btn-toolbar {
@@ -544,7 +532,7 @@ $contentsPadding: 1.2rem;
     font-size: 1.5rem;
     font-size: 24px;
     font-weight: bold;
-    color: $f-g4;
+    color: $f-g2;
   }
   
 }
@@ -651,8 +639,10 @@ $contentsPadding: 1.2rem;
 .c-box {
   padding: 30px;
   margin-bottom: 20px;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   border-radius: 5px;
   background-color: white;
 
@@ -689,6 +679,69 @@ $contentsPadding: 1.2rem;
 
   .c-r {
     text-align: right;
+  }
+
+  &.c-s {
+    padding: 10px 20px 20px;
+    flex-direction: column;
+  }
+
+  &.more {
+    padding-bottom: 80px;
+  }
+
+  .btn-wrap {
+    padding: 0 20px; 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+  }
+  
+  .btn {
+    position: relative;
+    line-height: 1;
+    
+    span {
+      font-size: 0.75rem;
+      color: $f-g3;
+    }
+
+    span + .feather,
+    .feather + span {
+      margin-left: 5px;
+    }
+    
+    .feather {
+      &::before {
+        font-size: 0.75rem;
+        vertical-align: middle;
+      }
+    }
+
+    &.btn-primary {
+      span {
+        color: white;
+      }
+    }
+
+    &.more {
+      background-color: #f1f3fa;
+  
+      &[aria-expanded="true"] .feather {
+        display: inline-block;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  
+  .c-title {
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    color: #777;
   }
 }
 

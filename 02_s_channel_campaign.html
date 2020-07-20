@@ -11,6 +11,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="static/lib/bootstrap/4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/lib/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet">
   <link href="static/fonts/feather/css/iconfont.css" rel="stylesheet">
   <link href="static/css/dashboard.css" rel="stylesheet">
 
@@ -176,7 +177,7 @@
               <input class="form-control" type="text" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
                 <button class="btn btn-primary d-flex align-items-center search-btn shadow" type="submit">
-                  <i class="feather icon-search"></i>
+                  <i class="feather icon-search"><span class="sr-only">검색</span></i>
                 </button>
               </div>
             </div>
@@ -255,13 +256,85 @@
           <div class="row">
 
             <!-- search col -->
-            <div class="col-3">
-              <div class="c-box"></div>
+            <div class="col-lg-3 col-md-12">
+              <div class="c-box c-s more shadow">
+
+                <!-- title -->
+                <p class="c-title">search</p>
+                <!-- //title -->
+                
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="text">기간</label>
+                  <!-- input group -->
+                  <div class="input-group">
+                    <input id="text" type='text' class='datepicker-here form-control' data-language='ko' />
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary d-flex align-items-center" type="submit" title="기간 선택">
+                        <i class="feather icon-calendar"><span class="sr-only">기간 선택</span></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- //input group -->
+                </div>
+                <!-- //form group -->
+
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="text2">캠페인명</label>
+                  <!-- input group -->
+                  <div class="input-group">
+                    <input id="text2" type='text' class='form-control' />
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary d-flex align-items-center" type="submit" title="검색">
+                        <i class="feather icon-search"><span class="sr-only">검색</span></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- //input group -->
+                </div>
+                <!-- //form group -->
+
+                <div class="btn-wrap">
+                  <!-- 상세 버튼 -->
+                  <button class="btn more" type="button" data-toggle="collapse" data-target="#search-detail" aria-expanded="false" aria-controls="search-detail">
+                    <span>상세 검색</span>
+                    <i class="feather icon-chevron-down"><span class="sr-only">아이콘</span></i>
+                  </button>
+
+                  <!-- 엑셀 버튼 -->
+                  <button class="btn btn-primary bott" type="submit" title="엑셀 다운로드">
+                    <i class="feather icon-download"></i>
+                    <span>엑셀 다운로드</span>
+                  </button>
+                </div>
+                
+                <!-- 상세 검색 -->
+                <div class="collapse" id="search-detail">
+                  <!-- form group -->
+                  <div class="form-group">
+                    <label for="text3">기타</label>
+                    <!-- input group -->
+                    <div class="input-group">
+                      <input id="text3" type='text' class='form-control' />
+                      <div class="input-group-append">
+                        <button class="btn btn-secondary d-flex align-items-center" type="submit" title="검색">
+                          <i class="feather icon-search"><span class="sr-only">검색</span></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //input group -->
+                  </div>
+                  <!-- //form group -->
+                </div>
+                <!-- //상세 검색 -->
+
+              </div>
             </div>
             <!-- //search col -->
 
             <!-- tab col -->
-            <div class="col-9">
+            <div class="col-lg-9 col-md-12">
 
               <!-- tab title -->
               <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -275,9 +348,40 @@
               <!-- //tab title -->
 
               <!-- tab content -->
-              <div class="c-box">
+              <div class="c-box shadow">
                 <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Handle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
                 </div>
               </div>
@@ -299,6 +403,7 @@
   <script src="static/lib/jquery/jquery-3.4.1.slim.min.js"></script>
   <script src="static/lib/popper/popper.min.js"></script>
   <script src="static/lib/bootstrap/4.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="static/lib/air-datepicker/dist/js/datepicker.min.js"></script>
   <!-- <script src="static/lib/bootstrap/4.4.1-dist/js/bootstrap.bundle.min.js"></script> -->
 
   <script>

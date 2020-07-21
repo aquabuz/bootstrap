@@ -3,6 +3,16 @@
 @import 'color';
 @import 'bootstrap';
 
+%disabled {
+   background-color: #dee0e8;
+   border-color: #dee0e8;
+   cursor: default;
+
+   .feather {
+      color: $f-g1;
+   }
+}
+
 body {
    color: #555;
 }
@@ -24,6 +34,10 @@ a {
    }
 }
 
+.datepicker {
+   z-index: 1051;
+}
+
 .container-fluid,
 .container-lg,
 .container-md,
@@ -31,6 +45,66 @@ a {
 .container-xl {
    padding-right: 0;
    padding-left: 0;
+}
+
+label,
+.label {
+   margin-bottom: .25rem;
+   font-size: 0.85rem;
+}
+
+.btn {
+   &.btn-lg {
+      padding: 1rem;
+      font-size: 1rem;
+      line-height: 1;
+      border-radius: 0.25rem;
+
+      span {
+         font-size: 1rem;
+      }
+   }
+
+   &.btn-sm {
+      .feather::before,
+      span {
+         font-size: 0.85rem;
+      }
+
+   }
+
+   &.more {
+      .feather::before {
+         display: block;
+      }
+
+      &[aria-expanded="true"] {
+         .feather::before {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   &.btn-white {
+      border: 1px solid $f-g3;
+      background-color: white;
+   }
+   
+   span {
+      font-size: 0.85rem;
+   }
+   
+   &.side-toggle,
+   &.btn-primary,
+   &.btn-success {
+      .feather {
+         color: white;
+      }
+   }
+
+   .feather {
+      color: $c-dark3;
+   }
 }
 
 .btn-primary {
@@ -48,9 +122,14 @@ a {
 }
 
 .btn-secondary {
+   color: $f-g3;
    background-color: #f1f3fa;
    border-color: #f1f3fa;
-   color: #727cf5;
+   
+   &.disabled,
+   &:disabled {
+      @extend %disabled;
+   }
 }
 
 .btn-secondary:not(:disabled):not(.disabled):focus,
@@ -68,16 +147,35 @@ a {
 }
 
 .form-control {
-   padding: 0 1rem;
    width: 100%;
    font-size: 0.75rem;
    border-width: 0;
    border-radius: 3px;
    background-color: #f1f3fa;
+   
+   &:disabled,
+   &[readonly] {
+      @extend %disabled;
+   }
 }
 
 .table {
    color: $f-g4;
+   
+   a {
+      color: $f-g4;
+   }
+
+   thead th,
+   th,
+   td {
+      border-color: $f-g5;
+   }
+
+   tr:nth-child(even) th,
+   tr:nth-child(even) td {
+      background-color: #f1f3fa;
+   }
 }
 
 .tab-content {
@@ -86,15 +184,15 @@ a {
 
 .breadcrumb-item a,
 .breadcrumb-item {
-   color: $f-g2;
+   color: $f-g1;
 
    &+.breadcrumb-item::before {
-      color: $f-g2;
+      color: $f-g1;
    }
 
    &.active,
    &.active a {
-      color: $c-blue;
+      color: $f-g1;
    }
 }
 
@@ -109,22 +207,37 @@ a {
 }
 
 .nav-tabs {
+   border-bottom: 0;
+   
    .nav-item.show .nav-link,
    .nav-link.active {
-      color: white;
+      color: $c-dark;
       border: 0;
-      background-color: $c-p;
+      background-color: white;
    }
    
    .nav-link:focus,
    .nav-link:hover,
    .nav-link {
-     border: 0;
+      border: 0;
+   }
+   
+   .nav-link {
+      padding: 0.688rem 1.5rem;
+      background-color: #eee;
+      font-size: 0.85rem;
+      color: $f-g1;
+   }
+ }
+
+ .page-item {
+   .page-link {
+      color: $f-g4;
    }
 
-   .nav-link {
-     padding: 0.75rem 1.8rem;
-     font-size: 0.8rem;
+   &.active .page-link {
+      background-color: $c-blue;
+      border-color: $c-blue;
    }
  }
  

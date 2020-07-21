@@ -470,6 +470,10 @@ $contentsPadding: 1.2rem;
 
       &.btn {
         margin-right: 0;
+
+        span {
+          font-size: 0.95rem;
+        }
       }
     }
     
@@ -532,7 +536,7 @@ $contentsPadding: 1.2rem;
     font-size: 1.5rem;
     font-size: 24px;
     font-weight: bold;
-    color: $f-g2;
+    color: $c-dark3;
   }
   
 }
@@ -555,6 +559,12 @@ $contentsPadding: 1.2rem;
       display: inline-block;
       font-size: 0.75rem;
     }
+  }
+
+  .feather,
+  span {
+    font-size: 0.8rem;
+    color: $f-g1;
   }
 
   &.up .feather,
@@ -646,10 +656,9 @@ $contentsPadding: 1.2rem;
   border-radius: 5px;
   background-color: white;
 
-  span {
-    font-size: 0.8rem;
-    color: $f-g1;
-  }
+  // .dash-board & {
+  //   padding: 30px;
+  // }
 
   .i {
     margin-top: 12px;
@@ -682,7 +691,6 @@ $contentsPadding: 1.2rem;
   }
 
   &.c-s {
-    padding: 10px 20px 20px;
     flex-direction: column;
   }
 
@@ -691,57 +699,24 @@ $contentsPadding: 1.2rem;
   }
 
   .btn-wrap {
-    padding: 0 20px; 
+    padding: 0 30px; 
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    bottom: 20px;
+    bottom: 30px;
     left: 0;
     width: 100%;
   }
   
-  .btn {
-    position: relative;
-    line-height: 1;
-    
-    span {
-      font-size: 0.75rem;
-      color: $f-g3;
-    }
-
-    span + .feather,
-    .feather + span {
-      margin-left: 5px;
-    }
-    
-    .feather {
-      &::before {
-        font-size: 0.75rem;
-        vertical-align: middle;
-      }
-    }
-
-    &.btn-primary {
-      span {
-        color: white;
-      }
-    }
-
-    &.more {
-      background-color: #f1f3fa;
-  
-      &[aria-expanded="true"] .feather {
-        display: inline-block;
-        transform: rotate(-180deg);
-      }
-    }
-  }
-  
   .c-title {
-    margin-bottom: 1.5rem;
-    font-size: 0.75rem;
-    color: #777;
+    margin-bottom: 1.8rem;
+    font-size: 0.85rem;
+    color: $c-dark3;
+
+    .feather {
+      margin-right: 0.2rem;
+    }
   }
 }
 
@@ -778,6 +753,17 @@ button .feather, .btn .feather, a .feather {
 
   &:hover {
     transition: all 80ms ease-in-out;
+  }
+}
+
+// table
+.tb-info {
+  margin-bottom: 1rem;
+  display: flex;
+  color: $f-g3;
+  
+  .feather {
+    margin-right: 0.3rem;
   }
 }
 

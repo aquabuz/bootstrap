@@ -232,7 +232,7 @@
           <!-- 상단 페이지 제목 -->
           <div class="row">
             <div class="col-12">
-              <div class="m-title mb-20">
+              <div class="m-title">
 
                 <!-- mini navi -->
                 <div class="btn-toolbar">
@@ -257,10 +257,15 @@
 
             <!-- search col -->
             <div class="col-lg-3 col-md-12">
+
+              <!-- c-box -->
               <div class="c-box c-s more shadow">
 
                 <!-- title -->
-                <p class="c-title">search</p>
+                <p class="c-title">
+                  <i class="feather icon-alert-octagon"></i>
+                  <span>검색 조건</span>
+                </p>
                 <!-- //title -->
                 
                 <!-- form group -->
@@ -268,9 +273,9 @@
                   <label for="text">기간</label>
                   <!-- input group -->
                   <div class="input-group">
-                    <input id="text" type='text' class='datepicker-here form-control' data-language='ko' />
+                    <input id="text" type='text' class='datepicker-here form-control' data-language='ko' disabled />
                     <div class="input-group-append">
-                      <button class="btn btn-secondary d-flex align-items-center" type="submit" title="기간 선택">
+                      <button class="btn btn-secondary d-flex align-items-center" type="submit" title="기간 선택" disabled>
                         <i class="feather icon-calendar"><span class="sr-only">기간 선택</span></i>
                       </button>
                     </div>
@@ -297,15 +302,14 @@
 
                 <div class="btn-wrap">
                   <!-- 상세 버튼 -->
-                  <button class="btn more" type="button" data-toggle="collapse" data-target="#search-detail" aria-expanded="false" aria-controls="search-detail">
-                    <span>상세 검색</span>
-                    <i class="feather icon-chevron-down"><span class="sr-only">아이콘</span></i>
+                  <button class="btn btn-sm more" type="button" data-toggle="collapse" data-target="#search-detail" aria-expanded="false" aria-controls="search-detail" title="상세 검색">
+                    <i class="feather icon-chevron-down"><span class="sr-only">상세 검색</span></i>
                   </button>
 
                   <!-- 엑셀 버튼 -->
-                  <button class="btn btn-primary bott" type="submit" title="엑셀 다운로드">
+                  <button class="btn btn-white btn-sm" type="submit" title="엑셀 다운로드">
                     <i class="feather icon-download"></i>
-                    <span>엑셀 다운로드</span>
+                    <span class="sr-only">엑셀 다운로드</span>
                   </button>
                 </div>
                 
@@ -330,6 +334,15 @@
                 <!-- //상세 검색 -->
 
               </div>
+              <!-- //c-box -->
+
+              <!-- 캠페인 버튼 -->
+              <button type="button" class="btn btn-warning btn-lg btn-block mb-3 shadow" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" title="캠페인 만들기">
+                <i class="feather icon-plus"></i>
+                <span>캠페인 만들기</span>
+              </button>
+              <!-- //캠페인 버튼 -->
+              
             </div>
             <!-- //search col -->
 
@@ -339,10 +352,10 @@
               <!-- tab title -->
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">진행중 Campaign</a>
+                  <a class="nav-link active" id="campaign-tab" data-toggle="tab" href="#campaign" role="tab" aria-controls="campaign" aria-selected="true">진행중 Campaign</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Message</a>
+                  <a class="nav-link" id="message-tab" data-toggle="tab" href="#message" role="tab" aria-controls="message" aria-selected="false">Message</a>
                 </li>
               </ul>
               <!-- //tab title -->
@@ -350,11 +363,27 @@
               <!-- tab content -->
               <div class="c-box shadow">
                 <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <table class="table">
+                  <div class="tab-pane fade show active" id="campaign" role="tabpanel" aria-labelledby="campaign-tab">
+
+                    <!-- total -->
+                    <p class="tb-info">
+                      <i class="feather icon-info"></i>
+                      <span>total:</span>
+                      <span>24</span>
+                    </p>
+                    <!-- //total -->
+
+                    <!-- campaign table -->
+                    <table class="table mb-4">
+                      <colgroup>
+                        <col width="10%">
+                        <col width="30%">
+                        <col width="*">
+                        <col width="20%">
+                      </colgroup>
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
+                          <th class="text-center" scope="col">#</th>
                           <th scope="col">First</th>
                           <th scope="col">Last</th>
                           <th scope="col">Handle</th>
@@ -362,27 +391,318 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
+                          <th class="text-center" scope="row">1</th>
                           <td>Mark</td>
                           <td>Otto</td>
                           <td>@mdo</td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <th class="text-center" scope="row">2</th>
                           <td>Jacob</td>
                           <td>Thornton</td>
                           <td>@fat</td>
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <th class="text-center" scope="row">3</th>
                           <td>Larry</td>
                           <td>the Bird</td>
                           <td>@twitter</td>
                         </tr>
+                        <tr>
+                          <th class="text-center" scope="row">4</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
                       </tbody>
                     </table>
+                    <!-- //campaign table -->
+
+                    <!-- pasing -->
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- //pasing -->
+                    
                   </div>
-                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                  <div class="tab-pane fade" id="message" role="tabpanel" aria-labelledby="message-tab">
+
+                    <!-- total -->
+                    <p class="tb-info">
+                      <i class="feather icon-info"></i>
+                      <span>total:</span>
+                      <span>24</span>
+                    </p>
+                    <!-- //total -->
+                    
+                    <!-- message table -->
+                    <table class="table mb-4">
+                      <colgroup>
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                        <col width="">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">메세지 관리명</th>
+                          <th scope="col">채널</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">메세지명</th>
+                          <th scope="col">발송건수</th>
+                          <th scope="col">도달(%)</th>
+                          <th scope="col">오픈(%)</th>
+                          <th scope="col">클릭(%)</th>
+                          <th scope="col">실패(%)</th>
+                          <th scope="col">재발송</th>
+                          <th scope="col">리포트</th>
+                          <th scope="col">제작률</th>
+                          <th scope="col">삭제</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td class="text-left">메세지 이름입니다.</td>
+                          <td class="text-left">오픈 채널</td>
+                          <td class="text-left">활성중</td>
+                          <td class="text-left">
+                            <a href="#none">동해물과 백두산이 마르고 닳도록</a>
+                          </td>
+                          <td>12</td>
+                          <td>15(%)</td>
+                          <td>5(%)</td>
+                          <td>85(%)</td>
+                          <td>1(%)</td>
+                          <td>23</td>
+                          <td>리포트</td>
+                          <td>5(%)</td>
+                          <td>6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                          <td>메세지 이름입니다.</td>
+                          <td>오픈 채널</td>
+                          <td>활성중</td>
+                          <td>동해물과 백두산이 마르고 닳도록</td>
+                          <td class="text-center">12</td>
+                          <td class="text-center">15(%)</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">85(%)</td>
+                          <td class="text-center">1(%)</td>
+                          <td class="text-center">23</td>
+                          <td class="text-center">리포트</td>
+                          <td class="text-center">5(%)</td>
+                          <td class="text-center">6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- //message table -->
+
+                    <!-- pasing -->
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- //pasing -->
+                    
+                  </div>
                 </div>
               </div>
               <!-- //tab content -->
@@ -399,6 +719,64 @@
 
   <!-- aside dimm -->
   <div class="bg-dimm"></div>
+
+  <!-- Centered modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Campaign</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- modal body -->
+        <div class="modal-body">
+          <form>
+            
+            <!-- form group -->
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Campaign:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <!-- //form group -->
+
+            <!-- form group -->
+            <div class="form-group">
+              <label for="text">기간</label>
+              <!-- input group -->
+              <div class="input-group">
+                <input id="text" type='text' class='datepicker-here form-control' data-language='ko' />
+                <div class="input-group-append">
+                  <button class="btn btn-secondary d-flex align-items-center" type="button" title="Period:">
+                    <i class="feather icon-calendar"><span class="sr-only">Period:</span></i>
+                  </button>
+                </div>
+              </div>
+              <!-- //input group -->
+            </div>
+            <!-- //form group -->
+            
+            <!-- form group -->
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Description:</label>
+              <textarea class="form-control" id="message-text" rows="10"></textarea>
+            </div>
+            <!-- //form group -->
+
+          </form>
+        </div>
+        <!-- //modal body -->
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><span>취소</span></button>
+          <button type="button" class="btn btn-primary"><span>등록</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Centered modal -->
 
   <script src="static/lib/jquery/jquery-3.4.1.slim.min.js"></script>
   <script src="static/lib/popper/popper.min.js"></script>

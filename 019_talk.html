@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Dashboard Template · Bootstrap</title>
+
+  <link href="static/lib/bootstrap/4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/lib/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet">
+  <link href="static/fonts/feather/css/iconfont.css" rel="stylesheet">
+  <link href="static/lib/simplebar/simplebar.css" rel="stylesheet">
+  <link href="static/css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="layout-dash">
+
+    <!-- left -->
+    <aside id="aside-area" class="a-wrap" data-simplebar>
+      <div class="">
+        <div class="a-head d-flex">
+          <a href="/">
+            <h1 class="logo">
+              <span class="sr-only">NEXFRON</span>
+            </h1>
+          </a>
+
+          <div class="btn-group noti" role="group" >
+            <button type="button" class="btn alarm" title="홈으로">
+              <i class="feather icon-home"></i>
+              <span class="sr-only">홈으로</span>
+            </button>
+            <button type="button" class="btn" title="쪽지함">
+              <i class="feather icon-mail"></i>
+              <span class="sr-only">쪽지함</span>
+            </button>
+          </div>
+
+        </div>
+        <nav id="sideBar" class="sidebar show">
+
+          <h6 class="sidebar-heading">
+            <span>Dashboard</span>
+          </h6>
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link d-flex active" href="#none" title="Finance">
+                <i class="feather icon-home"></i>
+                <span>
+                  Finance
+                  <span class="sr-only">선택된 메뉴</span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Analytics">
+                <i class="feather icon-file"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Call">
+                <i class="feather icon-layers"></i>
+                <span>Call</span>
+              </a>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading">
+            <span>Applications</span>
+          </h6>
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Calendar">
+                <i class="feather icon-file-text"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Project">
+                <i class="feather icon-file-text"></i>
+                <span>Project</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Mail">
+                <i class="feather icon-file-text"></i>
+                <span>Mail</span>
+                <!-- 알림 -->
+                <p class="num ml-auto">12</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Year-end sale">
+                <i class="feather icon-file-text"></i>
+                <span>Year-end sale</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Authentication">
+                <i class="feather icon-file-text"></i>
+                <span>Authentication</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="Board">
+                <i class="feather icon-file-text"></i>
+                <span>Board</span>
+                <!-- 토글 버튼 -->
+                <button class="arrow ml-auto" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  <i class="feather icon-chevron-right"></i>
+                  <span class="sr-only">열림/닫힘</span>
+                </button>
+              </a>
+              <div id="collapseExample" class="nav-toggle collapse">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link d-flex active" href="#none" title="Notice">
+                      <i class="feather icon-dot"></i>
+                      <span>Notice</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link d-flex" href="#none" title="FAQ">
+                      <i class="feather icon-dot"></i>
+                      <span>FAQ</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link d-flex" href="#none" title="Q&A">
+                      <i class="feather icon-dot"></i>
+                      <span>Q&A</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link d-flex" href="#none" title="News">
+                      <i class="feather icon-dot"></i>
+                      <span>News</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex" href="#none" title="SMS">
+                <i class="feather icon-file-text"></i>
+                <span>SMS</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- //left -->
+    
+    <div class="wrapper">
+
+      <!-- header -->
+      <div class="header fixed-top shadow">
+        <nav class="navbar flex-md-nowrap">
+
+          <!-- aside toggle btn -->
+          <button class="btn side-toggle" type="button">
+            <i class="feather icon-chevron-left"></i>
+          </button>
+          <!-- //aside toggle btn -->
+          
+          <form>
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-primary d-flex align-items-center search-btn shadow" type="submit">
+                  <i class="feather icon-search"><span class="sr-only">검색</span></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="navbar-nav h-r">
+            <div class="btn-group" role="group" aria-label="Basic">
+              <button type="button" class="btn alarm">
+                <i class="feather icon-message-circle"></i>
+                <span class="sr-only">메세지</span>
+              </button>
+              <button type="button" class="btn">
+                <i class="feather icon-star"></i>
+                <span class="sr-only">즐겨찾기</span>
+              </button>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic">
+              <button type="button" class="btn">
+                <i class="feather icon-settings"></i>
+                <span class="sr-only">설정</span>
+              </button>
+              <button type="button" class="btn">
+                <i class="feather icon-refresh-ccw"></i>
+                <span class="sr-only">새로고침</span>
+              </button>
+              <button type="button" class="btn">
+                <i class="feather icon-maximize-2"></i>
+                <span class="sr-only">최대 창크기</span>
+              </button>
+            </div>
+
+            <div class="btn-group">
+              <div class="dropdown d-flex">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                  <span>NEXFRON</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">NEXFRON2</a>
+                  <a class="dropdown-item" href="#">NEXFRON3</a>
+                  <a class="dropdown-item" href="#">NEXFRON4</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- //header -->
+
+      <main role="main" class="" data-simplebar>
+        <div class="container-fluid">
+
+          <!-- 상단 페이지 제목 -->
+          <div class="row">
+            <div class="col-12">
+              <div class="m-title">
+
+                <!-- mini navi -->
+                <div class="btn-toolbar">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Applications</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">알림톡</li>
+                    </ol>
+                  </nav>
+                </div>
+                <!-- //mini navi -->
+
+                <h2>알림톡</h2>
+
+              </div>
+            </div>
+          </div>
+          <!-- //상단 페이지 제목 -->
+          
+          <div class="row">
+
+            <!-- col-3 -->
+            <div class="col-lg-3 col-md-12">
+
+              <!-- c-box -->
+              <div class="c-box c-s more shadow">
+                
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="">템플릿 코드</label>
+                  <!-- input group -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="입력하세요"/>
+                  </div>
+                  <!-- //input group -->
+                </div>
+                <!-- //form group -->
+
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="">템플릿 이름</label>
+                  <input type="text" class="form-control" placeholder="입력하세요"/>
+                </div>
+                <!-- //form group -->
+
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="FormControlSelect1">부서</label>
+                  <select class="form-control" id="FormControlSelect1">
+                    <option disabled selected>부서 선택</option>
+                    <option>경영지원</option>
+                    <option>영업</option>
+                    <option>미래전략연구소</option>
+                  </select>
+                </div>
+                <!-- //form group -->
+
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="FormControlSelect2">메시지 유형</label>
+                  <select class="form-control" id="FormControlSelect2">
+                    <option disabled selected>메시지 유형 선택</option>
+                    <option>자동 메시지 기본값</option>
+                    <option>자동 메시지 초기값</option>
+                  </select>
+                </div>
+                <!-- //form group -->
+
+                <!-- form group -->
+                <div class="form-group">
+                  <label for="">발신프로필 키</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <!-- dropdown -->
+                        <button class="btn dropdown-toggle" type="button" id="dropdownKey" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">발신프로필 키 선택</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownKey">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                        <!-- //dropdown -->
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="발신프로필"/ readonly>
+                  </div>
+                </div>
+                <!-- //form group -->
+
+                <div class="btn-wrap">
+                  <!-- 상세 버튼 -->
+                  <button class="btn btn-sm more" type="button" data-toggle="collapse" data-target="#search-detail" aria-expanded="false" aria-controls="search-detail" title="상세 검색">
+                    <i class="feather icon-chevron-down"><span class="sr-only">상세 검색</span></i>
+                  </button>
+                </div>
+                
+                <!-- 상세 검색 -->
+                <div class="collapse" id="search-detail">
+                  <!-- form check -->
+                  <div class="form-check mt-2">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">문자로 전환(실패시)</label>
+                  </div>
+                  <!-- //form check -->
+                </div>
+                <!-- //상세 검색 -->
+
+              </div>
+              <!-- //c-box -->
+
+              <!-- 캠페인 버튼 -->
+              <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" title="캠페인 불러오기">
+                <i class="feather icon-plus"></i>
+                <span>캠페인 불러오기</span>
+              </button>
+              <!-- //캠페인 버튼 -->
+              
+            </div>
+            <!-- //col-3 -->
+
+            <!-- tab col -->
+            <div class="col-lg-7 col-md-12">
+
+              <!-- c-box -->
+              <div class="c-box shadow">
+                <div class="col-two">
+                  <div class="form-group">
+                    <label for="eTextarea1">알림톡 작성</label>
+                    
+                    <!-- 문자표 -->
+                    <ul class="nav nav-tabs" id="characterTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="characterUni-tab" data-toggle="tab" href="#characterUni" role="tab" aria-controls="characterUni" aria-selected="true">특수문자</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="mappingText-tab" data-toggle="tab" href="#mappingText" role="tab" aria-controls="mappingText" aria-selected="false">매핑정보</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="characterUni" role="tabpanel" aria-labelledby="characterUni-tab">
+                        <ul class="code-uni">
+                          <li><a href="#none">☆</a></li>
+                          <li><a href="#none">★</a></li>
+                          <li><a href="#none">○</a></li>
+                          <li><a href="#none">●</a></li>
+                          <li><a href="#none">◎</a></li>
+                          <li><a href="#none">⊙</a></li>
+                          <li><a href="#none">◇</a></li>
+                          <li><a href="#none">◆</a></li>
+                          <li><a href="#none">□</a></li>
+                          <li><a href="#none">▣</a></li>
+                          <li><a href="#none">△</a></li>
+                          <li><a href="#none">▲</a></li>
+                          <li><a href="#none">▽</a></li>
+                          <li><a href="#none">▼</a></li>
+                          <li><a href="#none">◁</a></li>
+                          <li><a href="#none">◀</a></li>
+                          <li><a href="#none">▷</a></li>
+                          <li><a href="#none">▶</a></li>
+                          <li><a href="#none">♡</a></li>
+                          <li><a href="#none">♥</a></li>
+                          <li><a href="#none">♧</a></li>
+                          <li><a href="#none">♣</a></li>
+                          <li><a href="#none">◐</a></li>
+                          <li><a href="#none">◑</a></li>
+                          <li><a href="#none">▦</a></li>
+                          <li><a href="#none">☎</a></li>
+                          <li><a href="#none">♪</a></li>
+                          <li><a href="#none">♬</a></li>
+                          <li><a href="#none">※</a></li>
+                          <li><a href="#none">＃</a></li>
+                          <li><a href="#none">＠</a></li>
+                          <li><a href="#none">＆</a></li>
+                          <li><a href="#none">㉿</a></li>
+                          <li><a href="#none">™</a></li>
+                          <li><a href="#none">℡</a></li>
+                          <li><a href="#none">Σ</a></li>
+                          <li><a href="#none">Δ</a></li>
+                          <li><a href="#none">♂</a></li>
+                          <li><a href="#none">♀</a></li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="mappingText" role="tabpanel" aria-labelledby="mappingText-tab">........</div>
+                    </div>
+                    <!-- //문자표 -->
+                    
+                    <textarea class="form-control" id="eTextarea1" rows="12"></textarea>
+
+                    <p class="mt-1">
+                      <span class="badge badge-primary">0</span>
+                      /1000자
+                    </p>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="">Example textarea</label>
+                    <textarea class="form-control" id="" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- //c-box -->
+
+            </div>
+            <!-- //tab col -->
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- aside dimm -->
+  <div class="bg-dimm"></div>
+
+  <!-- Centered modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Campaign</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- modal body -->
+        <div class="modal-body">
+          <form>
+            
+            <!-- form group -->
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Campaign:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <!-- //form group -->
+
+            <!-- form group -->
+            <div class="form-group">
+              <label for="text">기간</label>
+              <!-- input group -->
+              <div class="input-group">
+                <input id="text" type="text" class="datepicker-here form-control" data-language="ko" />
+                <div class="input-group-append">
+                  <button class="btn btn-secondary d-flex align-items-center" type="button" title="Period:">
+                    <i class="feather icon-calendar"><span class="sr-only">Period:</span></i>
+                  </button>
+                </div>
+              </div>
+              <!-- //input group -->
+            </div>
+            <!-- //form group -->
+            
+            <!-- form group -->
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Description:</label>
+              <textarea class="form-control" id="message-text" rows="10"></textarea>
+            </div>
+            <!-- //form group -->
+
+          </form>
+        </div>
+        <!-- //modal body -->
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><span>취소</span></button>
+          <button type="button" class="btn btn-primary"><span>등록</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Centered modal -->
+
+  <script src="static/lib/jquery/jquery-3.4.1.slim.min.js"></script>
+  <script src="static/lib/popper/popper.min.js"></script>
+  <script src="static/lib/bootstrap/4.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="static/lib/air-datepicker/dist/js/datepicker.min.js"></script>
+  <script src="static/lib/simplebar/simplebar.min.js"></script>
+
+  <script>
+
+    // aside 토글
+    var aSdBtn = document.querySelector('.side-toggle');
+    var aSdArea = document.getElementById('aside-area');
+
+    function sSize() {
+      if (aSdArea.classList.contains('s-size')) {
+        aSdArea.classList.remove('s-size');
+      } else {
+        aSdArea.classList.add('s-size');
+      }
+    };
+    
+    aSdBtn.addEventListener('click', function() {
+      sSize();
+    });
+    
+    // aside 최소화
+    function wSize() {
+      if (window.innerWidth < 1280) {
+        aSdArea.classList.add('s-size');
+      }
+    }
+    
+    window.onload = function() {
+      wSize();
+    }
+    
+    window.onresize = function() {
+      wSize();
+    }
+
+  </script>
+  
+</body>
+
+</html>

@@ -4,8 +4,8 @@
 @import 'bootstrap';
 
 %disabled {
-   background-color: #dee0e8;
-   border-color: #dee0e8;
+   background-color: #e9ecef;
+   border-color: #e9ecef;
    cursor: default;
 
    .feather {
@@ -15,6 +15,11 @@
 
 body {
    color: #555;
+   overflow: hidden;
+}
+
+[data-simplebar] {
+   height: 100%;
 }
 
 a {
@@ -22,7 +27,12 @@ a {
 
    &:hover {
       color: black;
+      text-decoration: none;
    }
+}
+
+li {
+   list-style: none;
 }
 
 .feather {
@@ -49,7 +59,7 @@ a {
 
 label,
 .label {
-   margin-bottom: .25rem;
+   margin-bottom: .5rem;
    font-size: 0.85rem;
 }
 
@@ -86,7 +96,7 @@ label,
    }
 
    &.btn-white {
-      border: 1px solid $f-g3;
+      border: 1px solid #c4c4c4;
       background-color: white;
    }
    
@@ -159,7 +169,23 @@ label,
    }
 }
 
+.input-group-prepend {
+   margin-right: 0;
+}
+
+.input-group-text {
+   padding: 0;
+   border-color: #c4c4c4;
+   background-color: white;
+
+   .btn {
+      padding: 0 0.85rem;
+      height: 100%;
+   }
+}
+
 .table {
+   table-layout: fixed;
    color: $f-g4;
    
    a {
@@ -199,6 +225,10 @@ label,
 .dropdown-toggle,
 .dropdown-item {
    font-size: 0.9rem;
+}
+
+.dropdown-toggle::after {
+   margin-left: 0;
 }
 
 .dropdown-item {

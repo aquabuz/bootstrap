@@ -9,13 +9,11 @@
   <meta name="description" content="">
   <title>Dashboard Template · Bootstrap</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="static/lib/bootstrap/4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/lib/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet">
   <link href="static/fonts/feather/css/iconfont.css" rel="stylesheet">
+  <link href="static/lib/simplebar/simplebar.css" rel="stylesheet">
   <link href="static/css/dashboard.css" rel="stylesheet">
-
-  <!-- Favicons -->
-  <meta name="theme-color" content="#563d7c">
 
 </head>
 
@@ -23,7 +21,7 @@
   <div class="layout-dash">
 
     <!-- left -->
-    <aside id="aside-area" class="a-wrap">
+    <aside id="aside-area" class="a-wrap" data-simplebar>
       <div class="">
         <div class="a-head d-flex">
           <a href="/">
@@ -43,10 +41,6 @@
             </button>
           </div>
           
-          <button class="btn side-toggle" type="button">
-            <i class="feather icon-chevron-left"></i>
-          </button>
-
         </div>
         <nav id="sideBar" class="sidebar show">
 
@@ -171,6 +165,13 @@
       <!-- header -->
       <div class="header fixed-top shadow">
         <nav class="navbar flex-md-nowrap">
+          
+          <!-- aside toggle btn -->
+          <button class="btn side-toggle" type="button">
+            <i class="feather icon-chevron-left"></i>
+          </button>
+          <!-- //aside toggle btn -->
+
           <form>
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -181,6 +182,7 @@
               </div>
             </div>
           </form>
+
           <div class="navbar-nav h-r">
             <div class="btn-group" role="group" aria-label="Basic">
               <button type="button" class="btn alarm">
@@ -221,11 +223,12 @@
               </div>
             </div>
           </div>
+
         </nav>
       </div>
       <!-- //header -->
       
-      <main role="main" class="dash-board">
+      <main role="main" class="dash-board" data-simplebar>
         <div class="container-fluid">
           
           <!-- 상단 페이지 제목 -->
@@ -445,7 +448,7 @@
             <div class="col">
               <div class="c-box shadow">
                 <!-- 그리드 시작 -->
-                <div id="grid" style="width: 100%; height: 284px;"></div>
+                <div id="grid" style="width: 100%; height: 482px;"></div>
               </div>
             </div>
           </div>
@@ -456,13 +459,11 @@
     </div>
   </div>
 
-  <!-- aside dimm -->
-  <div class="bg-dimm"></div>
-
   <script src="static/lib/jquery/jquery-3.4.1.slim.min.js"></script>
   <script src="static/lib/popper/popper.min.js"></script>
   <script src="static/lib/bootstrap/4.4.1-dist/js/bootstrap.min.js"></script>
-  <!-- <script src="static/lib/bootstrap/4.4.1-dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="static/lib/air-datepicker/dist/js/datepicker.min.js"></script>
+  <script src="static/lib/simplebar/simplebar.min.js"></script>
 
   <script>
 

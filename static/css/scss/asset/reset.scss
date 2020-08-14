@@ -117,6 +117,15 @@ label,
    }
 }
 
+.nav-tabs {
+   border-color: #c4c4c4;
+
+   .nav-item.show .nav-link,
+   .nav-link.active {
+      border-color: #c4c4c4 #c4c4c4 white;
+   }
+}
+
 .btn-primary {
    background-color: $c-p;
    border-color: $c-p;
@@ -135,7 +144,7 @@ label,
    color: $f-g3;
    background-color: #f1f3fa;
    border-color: #f1f3fa;
-   
+
    &.disabled,
    &:disabled {
       @extend %disabled;
@@ -156,12 +165,20 @@ label,
    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
+.badge-primary {
+   background-color: $c-blue;
+}
+
 .form-control {
    width: 100%;
    font-size: 0.75rem;
    border-width: 0;
    border-radius: 3px;
    background-color: #f1f3fa;
+
+   &:focus {
+      background-color: #f1f3fa;
+   }
    
    &:disabled,
    &[readonly] {
@@ -236,29 +253,31 @@ label,
    padding-bottom: 0.5rem;
 }
 
-.nav-tabs {
-   border-bottom: 0;
-   
-   .nav-item.show .nav-link,
-   .nav-link.active {
-      color: $c-dark;
-      border: 0;
-      background-color: white;
+div[class|="col"] {
+   > .nav-tabs {
+      border-bottom: 0;
+
+      .nav-item.show .nav-link,
+      .nav-link.active {
+         color: $c-dark;
+         border: 0;
+         background-color: white;
+      }
+
+      .nav-link:focus,
+      .nav-link:hover,
+      .nav-link {
+         border: 0;
+      }
+
+      .nav-link {
+         padding: 0.688rem 1.5rem;
+         background-color: #eee;
+         font-size: 0.85rem;
+         color: $f-g1;
+      }
    }
-   
-   .nav-link:focus,
-   .nav-link:hover,
-   .nav-link {
-      border: 0;
-   }
-   
-   .nav-link {
-      padding: 0.688rem 1.5rem;
-      background-color: #eee;
-      font-size: 0.85rem;
-      color: $f-g1;
-   }
- }
+}
 
  .page-item {
    .page-link {
